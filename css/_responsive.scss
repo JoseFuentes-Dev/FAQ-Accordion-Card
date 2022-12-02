@@ -1,0 +1,51 @@
+@media screen and (min-width: 800px){
+    main{
+   display: grid;
+   grid-template-columns: 0 1fr 1fr;
+    width: 60%;
+    background: #fff url(../images/bg-pattern-desktop.svg) top no-repeat;
+    background-position: -35rem;
+    background-position-y: -18rem;
+    text-align: left;
+    padding: 0;
+    .header-image{
+        position: relative;
+        overflow: hidden;
+        .img1,.img2{
+            display: none;
+        }
+        .img3{
+            display: block;
+            position: relative;
+            height: 21.875rem;
+            width: 450px;
+            top: 5.3125rem;
+            left: -60px;
+
+        }
+    }
+    .container-acordeon{
+        padding: 50px;
+        text-align: left;
+        h1{
+            margin-bottom: 40px;
+        }
+        
+        .h2{
+            &:hover{
+                color: var(--Soft-red);
+            }
+        }
+    }
+   
+    .box{
+        display: block;
+        position: relative;
+        right: 5.625rem;
+        top: 13.75rem;
+        z-index: 1;
+    }
+    .container-acordeon{
+        margin: 0;}
+}
+}

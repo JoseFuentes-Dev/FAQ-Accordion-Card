@@ -1,0 +1,46 @@
+.container-acordeon{
+    width: 100%;
+    height: 65%;
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    h1{
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    .h2{
+        text-align: left;
+        position: relative;
+        font-size: .85em;  
+        color: var(--Very-dark-desaturated-blue);
+        cursor: pointer;
+        user-select: none;
+        font-weight: 400;
+        img{
+            position: absolute;
+            width: 10px;
+            bottom: 5px;
+            right: 5px;
+            transition: all .5s ease;
+        }
+    }
+    .details{
+        display: none;
+        text-align: left;
+        font-size: .7em;
+        color: var(--Dark-grayish-blue);
+        margin-top: 10px;
+    }
+}
+.rotate{
+    transform: rotate(180deg);
+}
+.bloque.activo .details{ 
+    display: block;
+}
+.bloque.activo .h2{
+    font-weight: 700;
+}

@@ -1,0 +1,72 @@
+$animation : 3s linear infinite;
+@mixin flex($dis,$dir,$back) {
+  display: $dis;
+  flex-direction: $dir;
+  background: $back
+}
+main{
+  @include flex(flex,column, #fff);
+    justify-content: center;
+    width: 327px;
+    border-radius: 25px;
+    position: relative;
+    padding: 25px;
+    .header-image{
+      display: flex;
+      justify-content: center;
+
+        .img1{
+          position: absolute;   
+          width: 230px;
+          top: -7rem;
+          animation: animate $animation;
+          z-index: 1;
+        }
+        .img2{
+          position: absolute;
+          top: .2rem;
+          animation: anime $animation;
+        }
+        .img3{
+          display: none;
+        }
+      }
+    &::before{
+        content: "";
+        position: absolute;
+        bottom: -5%;
+        left: 5%;
+        width: 90%;
+        height: 90%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+        filter: blur(10px);
+        border-radius: 25px;
+    }
+    .box{
+      display: none;
+    }
+}
+
+@keyframes animate{
+    0%{
+     transform: translateY(10px);
+    }
+  50%{
+    transform: translateY(0);
+  }
+    100%{
+      transform: translateY(10px);
+    }
+}
+@keyframes anime {
+  0%{
+    width: 240px;
+  }
+  50%{
+    width: 220px;
+}
+100%{
+  width: 240px;
+}
+}
