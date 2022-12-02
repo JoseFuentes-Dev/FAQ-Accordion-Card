@@ -10,6 +10,12 @@ const h2 = document.querySelectorAll('.h2');
 h2.forEach( ( cadaH2 , i )=>{
     // Asignando un CLICK a cada h2
     h2[i].addEventListener('click', ()=>{
-        bloque[i].classList.toggle('activo')
+        bloque.forEach( ( cadaBloque , i )=>{
+            // Quitamos la clase activo de TODOS los bloques
+            bloque[i].classList.remove('activo')
+        })
+        // Añadiendo la clase activo al bloque cuya posición sea igual al del h2
+        // (Línea número 12)
+        bloque[i].classList.add('activo')
     })
 })
